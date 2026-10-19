@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JLC Deco Muebles | Muebles a Medida y Diseño 3D en Rosario</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ebony: '#1C1917',
+                        caramel: '#B45309',
+                        studio: '#059669',
+                        cream: '#FAFAF9',
+                    },
+                    fontFamily: {
+                        sora: ['Sora', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Sora & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Sora', sans-serif; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+        }
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.9; }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 3s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-cream text-ebony antialiased selection:bg-caramel selection:text-white">
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-stone-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-ebony text-white flex items-center justify-center font-sora font-bold text-lg shadow-md group-hover:bg-caramel transition-colors">
+                    JLC
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-sora font-bold text-lg tracking-tight leading-tight">JLC DECO</span>
+                    <span class="text-xs font-medium text-caramel tracking-widest uppercase">Muebles & 3D · Rosario</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-stone-700">
+                <a href="#inicio" class="hover:text-caramel transition-colors">Inicio</a>
+                <a href="#servicios" class="hover:text-caramel transition-colors">Servicios 3D</a>
+                <a href="#proceso" class="hover:text-caramel transition-colors">El Proceso</a>
+                <a href="#galeria" class="hover:text-caramel transition-colors">Galería</a>
+                <a href="#opiniones" class="hover:text-caramel transition-colors">Reseñas</a>
+                <a href="#cotizador" class="hover:text-caramel transition-colors">Cotizador</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="https://wa.me/5493413552120?text=Hola%20JLC%20Deco,%20quiero%20pedir%20un%20Diseño%203D%20para%20mi%20proyecto" target="_blank" rel="noopener noreferrer" class="bg-studio hover:bg-emerald-700 text-white font-sora font-semibold text-sm px-5 py-2.5 rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center gap-2">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    Pedir Diseño 3D
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-btn" class="md:hidden p-2 text-stone-800 focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 px-6 py-4 space-y-3 shadow-xl">
+            <a href="#inicio" class="block font-medium text-stone-800 hover:text-caramel py-1">Inicio</a>
+            <a href="#servicios" class="block font-medium text-stone-800 hover:text-caramel py-1">Servicios 3D</a>
+            <a href="#proceso" class="block font-medium text-stone-800 hover:text-caramel py-1">El Proceso</a>
+            <a href="#galeria" class="block font-medium text-stone-800 hover:text-caramel py-1">Galería</a>
+            <a href="#opiniones" class="block font-medium text-stone-800 hover:text-caramel py-1">Reseñas</a>
+            <a href="#cotizador" class="block font-medium text-stone-800 hover:text-caramel py-1">Cotizador</a>
+            <div class="pt-2">
+                <a href="https://wa.me/5493413552120?text=Hola%20JLC%20Deco,%20quiero%20pedir%20un%20Diseño%203D%20para%20mi%20proyecto" target="_blank" rel="noopener noreferrer" class="w-full bg-studio text-white text-center font-sora font-semibold py-3 rounded-xl block shadow-md">
+                    Pedir Diseño 3D por WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-b from-stone-100 to-cream relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <!-- Google Rating Badge -->
+                    <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-stone-200 mx-auto lg:mx-0">
+                        <div class="flex text-amber-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <span class="text-xs font-bold text-stone-800">5.0 Estrellas</span>
+                        <span class="text-xs text-stone-500">| 66 reseñas reales en Google Maps</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-sora font-extrabold text-ebony leading-tight">
+                        Visualizá tu Proyecto en <span class="text-caramel">3D</span> antes de Fabricarlo
+                    </h1>
+
+                    <p class="text-lg text-stone-600 max-w-2xl mx-auto lg:mx-0 font-normal">
+                        Muebles a medida en Rosario con diseño hiperrealista previo. Optimizamos cada centímetro de tu hogar u oficina con calidad artesanal, melaminas premium y asesoramiento experto.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="https://wa.me/5493413552120?text=Hola%20JLC%20Deco,%20quiero%20empezar%20mi%20proyecto%20con%20diseño%203D" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-ebony hover:bg-stone-800 text-white font-sora font-semibold px-8 py-4 rounded-xl shadow-xl hover:shadow-2xl transition-all flex items-center justify-center gap-3 text-base">
+                            <i data-lucide="message-square" class="w-5 h-5 text-emerald-400">></i>
+                            Iniciar Proyecto por WhatsApp
+                        </a>
+                        <a href="#cotizador" class="w-full sm:w-auto bg-white hover:bg-stone-50 text-stone-800 border border-stone-300 font-sora font-semibold px-6 py-4 rounded-xl shadow-sm transition-all flex items-center justify-center gap-2 text-base">
+                            <i data-lucide="calculator" class="w-5 h-5 text-caramel"></i>
+                            Simular Presupuesto
+                        </a>
+                    </div>
+
+                    <!-- Trust indicators -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-stone-200 mt-8 text-center lg:text-left">
+                        <div>
+                            <p class="font-sora font-bold text-2xl text-ebony">100%</p>
+                            <p class="text-xs text-stone-500 mt-0.5">A medida y personalizado</p>
+                        </div>
+                        <div>
+                            <p class="font-sora font-bold text-2xl text-caramel">3D</p>
+                            <p class="text-xs text-stone-500 mt-0.5">Render previo sin sorpresas</p>
+                        </div>
+                        <div>
+                            <p class="font-sora font-bold text-2xl text-studio">Rosario</p>
+                            <p class="text-xs text-stone-500 mt-0.5">Fabricación e instalación</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Hero Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Decorative background glow -->
+                        <div class="absolute -inset-2 bg-gradient-to-r from-caramel to-studio rounded-3xl blur-xl opacity-20 animate-pulse-slow"></div>
+                        
+                        <div class="relative bg-white p-4 rounded-3xl shadow-2xl border border-stone-200">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Diseño de interior y muebles a medida" class="rounded-2xl object-cover w-full h-80 sm:h-96 shadow-md">
+                            
+                            <!-- Floating badge -->
+                            <div class="absolute -bottom-6 -left-6 bg-ebony text-white p-4 rounded-2xl shadow-xl flex items-center gap-3 border border-stone-800">
+                                <div class="w-10 h-10 rounded-xl bg-studio flex items-center justify-center">
+                                    <i data-lucide="box" class="w-5 h-5 text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-semibold text-stone-400">Estudio 3D Activo</p>
+                                    <p class="text-sm font-sora font-bold">Visualización Realista</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES / CATALOG SECTION -->
+    <section id="servicios" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-caramel tracking-wider uppercase bg-caramel/10 px-3 py-1 rounded-full">Catálogo & Soluciones</span>
+                <h2 class="text-3xl sm:text-4xl font-sora font-extrabold text-ebony mt-4">
+                    Nuestros Servicios Especializados
+                </h2>
+                <p class="text-stone-600 mt-3 text-base">
+                    Diseñamos y fabricamos amoblamientos inteligentes adaptados a tu espacio, estética y funcionalidad requerida.
+                </p>
+            </div>
+
+            <!-- Service Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="bg-stone-50 rounded-3xl p-6 border border-stone-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-48 rounded-2xl overflow-hidden mb-6 relative">
+                            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" alt="Bajo Mesadas y Alacenas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-ebony/80 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-medium">Cocinas</span>
+                        </div>
+                        <h3 class="font-sora font-bold text-xl text-ebony mb-2">Bajo Mesadas y Alacenas</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                            Optimización absoluta de tu cocina con herrajes de cierre suave, melaminas resistentes a la humedad y distribución ergonómica.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5493413552120?text=Hola%20JLC%20Deco,%20quiero%20consultar%20por%20Bajo%20Mesadas%20y%20Alacenas" target="_blank" rel="noopener noreferrer" class="w-full bg-white hover:bg-ebony hover:text-white text-stone-800 border border-stone-300 font-sora font-semibold text-sm py-3 rounded-xl transition-all text-center flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4 text-emerald-500"></i>
+                        Consultar por este servicio
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-stone-50 rounded-3xl p-6 border border-stone-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-48 rounded-2xl overflow-hidden mb-6 relative">
+                            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=80" alt="Escritorios y Espacios de Trabajo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-ebony/80 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-medium">Home Office</span>
+                        </div>
+                        <h3 class="font-sora font-bold text-xl text-ebony mb-2">Escritorios & Home Office</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                            Espacios de trabajo funcionales con pasa-cables integrados, cajoneras con seguridad y diseño moderno para potenciar tu productividad.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5493413552120?text=Hola%20JLC%20Deco,%20quiero%20consultar%20por%20Escritorios%20y%20Home%20Office" target="_blank" rel="noopener noreferrer" class="w-full bg-white hover:bg-ebony hover:text-white text-stone-800 border border-stone-300 font-sora font-semibold text-sm py-3 rounded-xl transition-all text-center flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4 text-emerald-500"></i>
+                        Consultar por este servicio
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-stone-50 rounded-3xl p-6 border border-stone-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-48 rounded-2xl overflow-hidden mb-6 relative">
+                            <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=600&q=80" alt="Despenseros y Guardado Inteligente" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-ebony/80 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-medium">Organización</span>
+                        </div>
+                        <h3 class="font-sora font-bold text-xl text-ebony mb-2">Despenseros y Guardado</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                            Muebles de guardado inteligente, vajilleros y despenseros diseñados a medida para aprovechar al máximo cada rincón de tu hogar.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5493413552120?text=Hola%20JLC%20Deco,%20quiero%20consultar%20por%20Despenseros%20y%20Guardado" target="_blank" rel="noopener noreferrer" class="w-full bg-white hover:bg-ebony hover:text-white text-stone-800 border border-stone-300 font-sora font-semibold text-sm py-3 rounded-xl transition-all text-center flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4 text-emerald-500"></i>
+                        Consultar por este servicio
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-stone-50 rounded-3xl p-6 border border-stone-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-48 rounded-2xl overflow-hidden mb-6 relative">
+                            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=600&q=80" alt="Placares y Racks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-ebony/80 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-medium">Dormitorios & Living</span>
+                        </div>
+                        <h3 class="font-sora font-bold text-xl text-ebony mb-2">Placares, Racks y Repisas</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                            Placares con interiores personalizados, zapateros, racks para TV flotantes y estantes con iluminación LED integrada.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5493413552120?text=Hola%20JLC%20Deco,%20quiero%20consultar%20por%20Placares%2C%20Racks%20y%20Repisas" target="_blank" rel="noopener noreferrer" class="w-full bg-white hover:bg-ebony hover:text-white text-stone-800 border border-stone-300 font-sora font-semibold text-sm py-3 rounded-xl transition-all text-center flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4 text-emerald-500"></i>
+                        Consultar por este servicio
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-stone-50 rounded-3xl p-6 border border-stone-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group lg:col-span-2">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                        <div class="h-48 md:h-full rounded-2xl overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Modelado y Renderizado 3D Previo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-studio text-white text-xs px-3 py-1 rounded-full font-medium shadow-md">Exclusivo JLC</span>
+                        </div>
+                        <div>
+                            <h3 class="font-sora font-bold text-xl text-ebony mb-2">Modelado y Renderizado 3D Previo</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                                No te imagines cómo quedará: velo en alta definición. Creamos un render 3D exacto de tu espacio antes de cortar la primera placa para garantizar que el resultado supere tus expectativas.
+                            </p>
+                            <a href="https://wa.me/5493413552120?text=Hola%20JLC%20Deco,%20quiero%20saber%20más%20sobre%20el%20Modelado%203D%20Previo" target="_blank" rel="noopener noreferrer" class="w-full bg-studio hover:bg-emerald-700 text-white font-sora font-semibold text-sm py-3 px-6 rounded-xl transition-all text-center inline-flex items-center justify-center gap-2 shadow-md">
+                                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                                Solicitar Proyecto 3D
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS & DIFFERENTIATORS -->
+    <section id="proceso" class="py-24 bg-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-studio tracking-wider uppercase bg-studio/10 px-3 py-1 rounded-full">Metodología JLC</span>
+                <h2 class="text-3xl sm:text-4xl font-sora font-extrabold text-ebony mt-4">
+                    Del Boceto 3D a la Instalación en Rosario
+                </h2>
+                <p class="text-stone-600 mt-3 text-base">
+                    Un proceso transparente, ordenado y pensado para que disfrutes cada etapa de la renovación de tu hogar.
+                </p>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                
+                <!-- Step 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-200 relative">
+                    <div class="w-12 h-12 bg-ebony text-white rounded-2xl flex items-center justify-center font-sora font-bold text-lg mb-6 shadow-md">
+                        01
+                    </div>
+                    <h3 class="font-sora font-bold text-lg text-ebony mb-2">Asesoramiento & Ideas</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Nos contas tu idea, necesidades de espacio y presupuesto orientativo. Te asesoramos sobre materiales y distribución ideal.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-200 relative">
+                    <div class="w-12 h-12 bg-caramel text-white rounded-2xl flex items-center justify-center font-sora font-bold text-lg mb-6 shadow-md">
+                        02
+                    </div>
+                    <h3 class="font-sora font-bold text-lg text-ebony mb-2">Diseño 3D Previo</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Modelamos tu mueble en 3D para que puedas ver colores, texturas y dimensiones reales antes de dar el visto bueno a la fabricación.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-200 relative">
+                    <div class="w-12 h-12 bg-studio text-white rounded-2xl flex items-center justify-center font-sora font-bold text-lg mb-6 shadow-md">
+                        03
+                    </div>
+                    <h3 class="font-sora font-bold text-lg text-ebony mb-2">Fabricación de Precisión</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Cortamos y canteamos con maquinaria de alta tecnología en Rosario, utilizando melaminas de primera marca y herrajes duraderos.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-200 relative">
+                    <div class="w-12 h-12 bg-ebony text-white rounded-2xl flex items-center justify-center font-sora font-bold text-lg mb-6 shadow-md">
+                        04
+                    </div>
+                    <h3 class="font-sora font-bold text-lg text-ebony mb-2">Instalación Puntual</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Llevamos el mueble a tu domicilio en Rosario y zona, realizamos el montaje limpio y dejamos todo listo para usar.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY VISUAL SECTION -->
+    <section id="galeria" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-caramel tracking-wider uppercase bg-caramel/10 px-3 py-1 rounded-full">Portfolio Real</span>
+                <h2 class="text-3xl sm:text-4xl font-sora font-extrabold text-ebony mt-4">
+                    Galería de Trabajos & Diseños 3D
+                </h2>
+                <p class="text-stone-600 mt-3 text-base">
+                    Inspirate con algunos de nuestros proyectos entregados y renderizados en Rosario.
+                </p>
+            </div>
+
+            <!-- Image Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-3xl shadow-md h-72 group relative">
+                    <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=700&q=80" alt="Mueble de Living Moderno" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-ebony/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white font-sora font-semibold text-sm">Rack TV & Estantes Flotantes · Rosario</p>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-3xl shadow-md h-72 group relative">
+                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80" alt="Cocina a medida" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-ebony/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white font-sora font-semibold text-sm">Bajo Mesada Melamina Texturada</p>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-3xl shadow-md h-72 group relative">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=700&q=80" alt="Placard Dormitorio" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-ebony/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white font-sora font-semibold text-sm">Placard con Interiores Inteligentes</p>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-3xl shadow-md h-72 group relative">
+                    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=700&q=80" alt="Home Office" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-ebony/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white font-sora font-semibold text-sm">Escritorio Ejecutivo Home Office</p>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-3xl shadow-md h-72 group relative">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80" alt="Diseño 3D" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-ebony/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white font-sora font-semibold text-sm">Visualización Render 3D Previo</p>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-3xl shadow-md h-72 group relative">
+                    <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=700&q=80" alt="Despensero" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-ebony/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white font-sora font-semibold text-sm">Mueble de Guardado Auxiliar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ ACCORDION SECTION -->
+    <section class="py-24 bg-stone-50 border-t border-stone-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold text-studio tracking-wider uppercase bg-studio/10 px-3 py-1 rounded-full">Dudas Frecuentes</span>
+                <h2 class="text-3xl sm:text-4xl font-sora font-extrabold text-ebony mt-4">
+                    Preguntas Frecuentes
+                </h2>
+                <p class="text-stone-600 mt-3 text-base">
+                    Todo lo que necesitás saber antes de encargar tu mobiliario en JLC Deco.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-sora font-semibold text-ebony flex justify-between items-center focus:outline-none">
+                        <span>¿Cómo funciona el diseño 3D previo antes de fabricar?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-stone-500 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-stone-600 text-sm leading-relaxed">
+                        Una vez que nos compartís las medidas aproximadas de tu espacio y tus ideas, armamos un modelo 3D detallado. Podrás ver los colores, distribución y estética final. Hacemos las modificaciones necesarias hasta que estés 100% conforme antes de iniciar la fabricación.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-sora font-semibold text-ebony flex justify-between items-center focus:outline-none">
+                        <span>¿Realizan visitas a domicilio para tomar medidas en Rosario?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-stone-500 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-stone-600 text-sm leading-relaxed">
+                        ¡Sí! Coordinamos una visita técnica por Rosario y zona de influencia para tomar las medidas exactas y evaluar nivelaciones de paredes o pisos, garantizando que el mueble calce a la perfección.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-sora font-semibold text-ebony flex justify-between items-center focus:outline-none">
+                        <span>¿Cuáles son los tiempos de entrega pactados?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-stone-500 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-stone-600 text-sm leading-relaxed">
+                        Nuestros plazos de entrega habituales se cumplen estrictamente y se detallan en el presupuesto. Operamos con un promedio de 15 a 25 días hábiles según la complejidad del proyecto.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-sora font-semibold text-ebony flex justify-between items-center focus:outline-none">
+                        <span>¿Qué materiales y herrajes utilizan?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-stone-500 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-stone-600 text-sm leading-relaxed">
+                        Trabajamos con melaminas de primera calidad sobre MDF o aglomerado de marcas líderes (Faplac / Masisa), cantos de PVC pegados a máquina y herrajes metálicos de alta gama (bisagras con cierre suave, correderas telescópicas).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF & QUICK QUOTE SIMULATOR -->
+    <section id="cotizador" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-caramel tracking-wider uppercase bg-caramel/10 px-3 py-1 rounded-full">Herramienta Interactiva</span>
+                <h2 class="text-3xl sm:text-4xl font-sora font-extrabold text-ebony mt-4">
+                    Simulador & Cotización Rápida
+                </h2>
+                <p class="text-stone-600 mt-3 text-base">
+                    Completá estos breves datos para armar un mensaje directo a nuestro WhatsApp con tu estimación.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Simulator Form -->
+                <div class="lg:col-span-7 bg-stone-50 p-8 rounded-3xl border border-stone-200 shadow-sm">
+                    <h3 class="font-sora font-bold text-xl text-ebony mb-6 flex items-center gap-2">
+                        <i data-lucide="calculator" class="w-5 h-5 text-caramel"></i>
+                        Cotizador Online JLC
+                    </h3>
+
+                    <form id="quote-form" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-stone-700 mb-2">1. Seleccioná el Mueble que Necesitás</label>
+                            <select id="mueble-tipo" class="w-full bg-white border border-stone-300 rounded-xl px-4 py-3 text-stone-800 font-medium focus:outline-none focus:ring-2 focus:ring-caramel">
+                                <option value="Bajo Mesada y Alacena">Bajo Mesada y Alacena</option>
+                                <option value="Escritorio / Home Office">Escritorio / Home Office</option>
+                                <option value="Placard / Vestidor">Placard / Vestidor</option>
+                                <option value="Rack TV / Repisas Flotantes">Rack TV / Repisas Flotantes</option>
+                                <option value="Despensero / Guardado">Despenseros / Guardado</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-stone-700 mb-2">2. Ancho aproximado en metros (ej. 2.5m)</label>
+                            <input type="text" id="mueble-medida" placeholder="Ej: 2 metros" class="w-full bg-white border border-stone-300 rounded-xl px-4 py-3 text-stone-800 font-medium focus:outline-none focus:ring-2 focus:ring-caramel" required>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-stone-700 mb-2">3. Terminación / Estilo preferido</label>
+                            <select id="mueble-estilo" class="w-full bg-white border border-stone-300 rounded-xl px-4 py-3 text-stone-800 font-medium focus:outline-none focus:ring-2 focus:ring-caramel">
+                                <option value="Madera Natural + Negro Ébano">Madera Natural + Negro Ébano</option>
+                                <option value="Melamina Blanca Minimalista">Melamina Blanca Minimalista</option>
+                                <option value="Gris Grafito + Detalle Roble">Gris Grafito + Detalle Roble</option>
+                                <option value="A definir con Asesoramiento 3D">A definir con Asesoramiento 3D</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="w-full bg-studio hover:bg-emerald-700 text-white font-sora font-semibold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 text-base">
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                            Enviar Consulta por WhatsApp
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Google Reviews & Location Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    
+                    <!-- Review Card 1 -->
+                    <div class="bg-stone-50 p-6 rounded-3xl border border-stone-200">
+                        <div class="flex items-center gap-1 text-amber-500 mb-2">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-stone-700 text-sm italic mb-4">
+                            "Excelente predisposición y muy buen criterio para asesorar. El diseño 3D previo nos salvó de cometer errores de distribución. Cumplieron exactamente con los tiempos de entrega pactados. Súper recomendables en Rosario."
+                        </p>
+                        <p class="font-sora font-bold text-sm text-ebony">Mariana Gómez</p>
+                        <p class="text-xs text-stone-500">Reseña verificada en Google Maps</p>
+                    </div>
+
+                    <!-- Review Card 2 -->
+                    <div class="bg-stone-50 p-6 rounded-3xl border border-stone-200">
+                        <div class="flex items-center gap-1 text-amber-500 mb-2">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-stone-700 text-sm italic mb-4">
+                            "Precios muy accesibles en comparación con otros estudios y una calidad de terminación impecable. El mueble quedó perfecto en la zona de Hermana Paula Márquez. ¡Un placer trabajar con profesionales así!"
+                        </p>
+                        <p class="font-sora font-bold text-sm text-ebony">Esteban Roldán</p>
+                        <p class="text-xs text-stone-500">Reseña verificada en Google Maps</p>
+                    </div>
+
+                    <!-- Location / Hours Box -->
+                    <div class="bg-ebony text-white p-6 rounded-3xl space-y-4">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-caramel flex-shrink-0 mt-1"></i>
+                            <div>
+                                <p class="font-sora font-bold text-sm">Ubicación en Rosario</p>
+                                <p class="text-xs text-stone-300">Zona Hermana Paula Márquez y Emilia Bertolé, Rosario, Santa Fe.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="clock" class="w-5 h-5 text-studio flex-shrink-0 mt-1"></i>
+                            <div>
+                                <p class="font-sora font-bold text-sm">Horarios de Atención</p>
+                                <p class="text-xs text-stone-300">Lunes a Viernes de 9:00 a 16:00 hs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-ebony text-stone-400 py-16 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="space-y-4 md:col-span-2">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-caramel text-white flex items-center justify-center font-sora font-bold text-sm">
+                            JLC
+                        </div>
+                        <span class="font-sora font-bold text-lg text-white tracking-tight">JLC DECO MUEBLES</span>
+                    </div>
+                    <p class="text-sm text-stone-400 max-w-sm leading-relaxed">
+                        Fabricación de muebles a medida con diseño previo en 3D en Rosario. Calidad, estética moderna y cumplimiento estricto.
+                    </p>
+                </div>
+                <div>
+                    <p class="font-sora font-bold text-white text-sm mb-4">Navegación</p>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="#servicios" class="hover:text-white transition-colors">Servicios 3D</a></li>
+                        <li><a href="#proceso" class="hover:text-white transition-colors">El Proceso</a></li>
+                        <li><a href="#galeria" class="hover:text-white transition-colors">Galería</a></li>
+                        <li><a href="#cotizador" class="hover:text-white transition-colors">Cotizador Online</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-sora font-bold text-white text-sm mb-4">Contacto Directo</p>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-studio"></i>
+                            <span>+54 9 341 355-2120</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-caramel"></i>
+                            <span>Rosario, Santa Fe, Argentina</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500">
+                <p>&copy; 2026 JLC Deco Muebles. Todos los derechos reservados.</p>
+                <p class="mt-2 sm:mt-0">Diseño Interior Moderno & Estudio 3D en Rosario</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/5493413552120?text=Hola%20JLC%20Deco,%20estoy%20visitando%20su%20web%20y%20quiero%20consultar%20por%20un%20proyecto" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-emerald-600 hover:bg-emerald-500 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center transition-all animate-pulse-slow hover:scale-110" aria-label="Abrir WhatsApp">
+        <i data-lucide="message-circle" class="w-7 h-7 fill-white text-emerald-600"></i>
+    </a>
+
+    <!-- SCRIPTS INITIALIZATION -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle logic
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // FAQ Accordion functionality
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                // Toggle current
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Quote Simulator Form handler
+        const quoteForm = document.getElementById('quote-form');
+        quoteForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const tipo = document.getElementById('mueble-tipo').value;
+            const medida = document.getElementById('mueble-medida').value;
+            const estilo = document.getElementById('mueble-estilo').value;
+
+            const text = `Hola JLC Deco! Usé el cotizador web y quiero consultar por:%0A- Mueble: ${encodeURIComponent(tipo)}%0A- Medida aprox: ${encodeURIComponent(medida)}%0A- Estilo: ${encodeURIComponent(estilo)}%0A%CQuiero agendar mi diseño 3D!`;
+            const whatsappUrl = `https://wa.me/5493413552120?text=${text}`;
+            
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+</body>
+</html>
